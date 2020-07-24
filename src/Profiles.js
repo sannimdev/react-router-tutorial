@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { Link, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 
 function Profiles() {
   //서브 라우터
@@ -10,10 +10,26 @@ function Profiles() {
       <h3>사용자 목록</h3>
       <ul>
         <li>
-          <Link to="/profiles/gildong">gildong</Link>
+          <NavLink
+            activeStyle={{ background: "black", color: "white" }}
+            activeClassName="active"
+            // exact 속성도 추가할 수 있음
+            isActive={(match, location) => {
+              return true; //조건을 지정하여 true인 경우에만 활성화
+            }}
+            to="/profiles/gildong"
+          >
+            gildong
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/homer">homer</Link>
+          <NavLink
+            activeStyle={{ background: "black", color: "white" }}
+            activeClassName="active"
+            to="/profiles/homer"
+          >
+            homer
+          </NavLink>
         </li>
       </ul>
       <Route
