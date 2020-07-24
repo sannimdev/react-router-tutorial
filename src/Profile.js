@@ -1,4 +1,5 @@
 import React from "react";
+import WithRouterSample from "./WithRouterSample";
 
 const profileData = {
   gildong: {
@@ -24,6 +25,10 @@ function Profile({ match }) {
         {username} ({profile.name})
       </h3>
       <p>{profile.description}</p>
+      {/* Route로 사용되지 않은 컴포넌트에서 특정 조건이 만족할 때 특정 경로로 이동하고자 한다면  WithRouter를 사용한다. */}
+      {/* <WithRouterSample /> */}
+      {/* Profile.js에서 바라보는 관점에서는 match 값은 다음과 같다. 
+      { "path": "/profiles/:username", "url": "/profiles/gildong", "isExact": true, "params": { "username": "gildong" } }*/}
     </div>
   );
 }

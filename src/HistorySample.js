@@ -17,6 +17,7 @@ function HistorySample({ history }) {
     console.log(history);
     const unblock = history.block("정말 떠나실 건가요 😥");
     return () => {
+      //컴포넌트가 언마운트 될 때 실행하는 구문 작성
       unblock();
     };
   }, [history]);

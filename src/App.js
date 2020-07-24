@@ -4,7 +4,6 @@ import Home from "./Home";
 import About from "./About";
 import Profiles from "./Profiles";
 import HistorySample from "./HistorySample";
-import WithRouterSample from "./WithRouterSample";
 
 function App() {
   return (
@@ -39,8 +38,6 @@ function App() {
           )}
         />
       </Switch>
-      <hr />
-      <WithRouterSample />
     </div>
   );
 }
