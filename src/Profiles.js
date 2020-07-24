@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import { NavLink, Route } from "react-router-dom";
+import RouterHookSample from "./RouterHookSample";
 
 function Profiles() {
   //서브 라우터
@@ -38,6 +39,7 @@ function Profiles() {
         render={({ match, loaction }) => <div>사용자를 선택해 주세요</div>}
       />
       <Route path="/profiles/:username" component={Profile} />
+      <RouterHookSample />
     </div>
   );
 }
