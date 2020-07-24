@@ -6,6 +6,7 @@ function About({ location }) {
   const query = qs.parse(location.search, { ignoreQueryPrefix: true });
   const detail = query.detail === "true"; //쿼리는 모두 문자열로 가져오기 때문에 문자열로서 비교해야 한다.
   console.log(query, detail);
+
   return (
     <div>
       <h1>소개</h1>
